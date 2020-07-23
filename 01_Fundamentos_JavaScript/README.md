@@ -84,3 +84,5 @@ Si la función tiene como cuerpo el retorno de un valor o de una expresión, de 
 Se puede reducir de la forma: 
 
     const myFunction = (param1, param2, ...) => 'Hello World!';
+
+---
