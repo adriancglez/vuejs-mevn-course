@@ -45,3 +45,42 @@ Con `let`:
 
     console.log(edad);  // Imprime 10
 
+---
+
+## FUNCIONES DE FLECHA
+
+Las funciones de flecha ayudan a simplificar un poco más el código.
+
+La forma tradicional para declarar funciones:
+
+    function myFunction() {
+        ...
+    }
+
+La forma de convertir esta función a función de flecha:
+
+    const myFunction = () => {
+        ...
+    }
+
+Para declarar una función de flecha con N cantidad de parámetros:
+
+    const myFunction => (param1, param2, param3, ...) => {
+        ...
+    }
+
+Si la función recibirá uno y sólo un parámetro, se pueden omitir los paréntesis:
+
+    const myFunction = param => {
+        ...
+    }
+
+Si la función tiene como cuerpo el retorno de un valor o de una expresión, de la forma normal sería:
+
+    const myFunction = (param1, param2, ...) => {
+        return 'Hello World!';
+    }
+
+Se puede reducir de la forma: 
+
+    const myFunction = (param1, param2, ...) => 'Hello World!';
