@@ -86,3 +86,21 @@ Se puede reducir de la forma:
     const myFunction = (param1, param2, ...) => 'Hello World!';
 
 ---
+
+## TEMPLATE STRING
+
+Una forma de concatenar cadenas con variables es usando el operador `+`
+
+    const numero = (num) => {
+        return 'El número es ' + num;
+    }
+
+Una forma intuitiva y con mejor estructura para realizar la concatenación:
+
+    const numero = (num) => {
+        return `El número es ${num}`;
+    }
+
+Simplificada:
+
+    const numero = (numero1m, numero2) => (`La suma es: ${numero2 + numero2}`);
