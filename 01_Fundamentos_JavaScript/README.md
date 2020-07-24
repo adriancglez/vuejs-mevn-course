@@ -122,3 +122,13 @@ Para acceder a todas las propiedades de un objeto, basta con llamar al objeto. P
     objeto.propiedad2;
 
 Para crear una nueva propiedad a un objeto, basta con llamar al objeto, seguido de punto (.) y el nombre de la nueva propiedad asignando el nuevo valor.
+
+    objeto.nuevapropiedad = value;
+
+## DESTRUCTURING OBJECTS
+
+Esta característa nos permite asignar los valores de las propiedades de un objeto a variables de una forma sencilla, sin tener que declarar la variable y asignarle el valor la propiedad del objeto directamente. La sintaxis para el destructuring objetcs:
+
+    const { prop1, prop3, prop2, ... } = objeto;
+
+Basta con declarar un objeto de variables que apuntarán a los nombres de las propiedades del objeto asignado. No importa el orden pero si importa el nombre de las variables.
