@@ -104,3 +104,21 @@ Una forma intuitiva y con mejor estructura para realizar la concatenación:
 Simplificada:
 
     const numero = (numero1m, numero2) => (`La suma es: ${numero2 + numero2}`);
+
+## OBJETOS
+
+Para declarar un objeto, se usa la sintaxis:
+
+    const objeto = {
+        propiedad1: value,
+        propiedad2: value,
+        ...
+    }
+
+Un objeto con muchas propiedades, sus propiedades aceptan diferentes tipos de datos.
+
+Para acceder a todas las propiedades de un objeto, basta con llamar al objeto. Para acceder a una propiedad específica de un objeto, hay que llamar al objeto seguido de punto (.) y el nombre de la propiedad.
+
+    objeto.propiedad2;
+
+Para crear una nueva propiedad a un objeto, basta con llamar al objeto, seguido de punto (.) y el nombre de la nueva propiedad asignando el nuevo valor.
