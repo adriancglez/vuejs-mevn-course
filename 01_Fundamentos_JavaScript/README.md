@@ -132,3 +132,27 @@ Esta característa nos permite asignar los valores de las propiedades de un obje
     const { prop1, prop3, prop2, ... } = objeto;
 
 Basta con declarar un objeto de variables que apuntarán a los nombres de las propiedades del objeto asignado. No importa el orden pero si importa el nombre de las variables.
+
+## FETCH API
+
+Fetch nos permite consumir API. Una API es una respuesta del servidor que nos va a estar entregando información que podemos consumir en nuestro sitio web.
+
+## ASYNC AWAIT
+
+La declaración de función `async` define una función asíncrona.
+
+Cuando trabajamos con `async`, debemos hacer una función de flecha:
+
+    const myFunction = async() => {
+        ...
+    }
+
+Await va a funcionar siempre y cuando esté dentro de una función `async`.
+
+## MAP
+
+Un `map` es un método que crea un nuevo array con los resultados de la llamadaa la función indicada aplicados a cada uno de sus elementos.
+
+## FILTER
+
+El método `filter` crea un nuevo array con todos los elementos que cumplan una condición implementada por la función dada.
