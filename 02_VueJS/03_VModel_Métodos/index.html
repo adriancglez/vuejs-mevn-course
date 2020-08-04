@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>{{ titulo }}</h1>
+            <h2>{{ nombre }}</h2>
+            <input type="text" v-model="nuevoData">
+            <button v-on:click="addTecnologia">Agregar</button>
+            <ul>
+                <li v-for="lenguaje of lenguajes">{{ lenguaje }}</li>
+            </ul>
+            <ul>
+                <li v-for="tecnologia of tecnologias">
+                    {{tecnologia.nombre}} - {{tecnologia.framework}} - 
+                    <span v-if="tecnologia.nivel == 1">Básico</span>
+                    <span v-if="tecnologia.nivel == 2">Básico - Intermedio</span>
+                    <span v-if="tecnologia.nivel == 3">Intermedio</span>
+                </li>
+            </ul>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

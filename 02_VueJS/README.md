@@ -73,3 +73,112 @@ La directiva `v-for` sirve para recorrer un arreglo o un objeto y mostrar sus it
     <ul>
         <li v-for="item of items"></li>
     </ul>
+
+### v-model
+
+La directiva `v-model` nos permite hacer una conexión directa entre un `input` y el `JavaScript`, más específicamente, entre el `input` y un dato declarado en el objeto `data` en tiempo real.
+
+    <input type="text" v-model="myNewData">
+
+### v-bind:class
+
+La directiva `v-bind:class`, nos permite incorporar clases de manera dinámicas en nuestro `HTML`, existen múltiples formas de usarla, las más comunes:
+
+* Cuando queremos agregar una clase en forma plana:
+
+    `<div :class="'myClass'"></div>`
+
+* Cuando el nombre de nuestra clase se encuentra en una variable declarada en el `data`:
+
+    `<div :class="myClassWithVariable"></div>`
+
+* Cuando tenemos un array entre clases planas y variables declaradas en el `data`:
+
+    `<div :class="['myClass', myClassWithVariable]">`
+
+* Cuando nuestra variable se encuentra en un objeto:
+
+    `<div :class="{'myClass': true}">`
+
+## MÉTODOS
+
+Es un objeto propio de la instancia de `Vue`, que se declara como una nueva propiedad, junto con `el`, y `data`. Dentro de la propiedad `methods` se declaran todos los métodos que se utilizarán.
+
+    el: ...,
+    data: {
+        ...
+    },
+    methods: {
+        myFirstMethod() {
+            ...
+        },
+
+        mySecondMethod() {
+            ...
+        }
+    }
+
+## EVENTOS
+
+### DE MOUSE
+
+#### CLICK
+
+Existen dos formas de manejar eventos en `Vue`, ya sea usando la expresión `v-on:click='myFirstMethod'` ó de forma mas simplificada `@click='mySecondMethod'`
+
+    <button v-on:click="addTecnologia">Click here!</button>
+
+    <button @click="addTecnologia">Click here!</button>
+
+### TECLAS
+
+#### KEYUP
+
+Para llamar a un evento keyup de alguna tecla en particular, lo realizamos de dos formas posibles
+
+    <input v-on:keyup.enter="myFirstMethod" type="text">
+
+    <input @keyup.enter="myFirstMethod" type="text">
+
+## ALCANCES DENTRO DE LA INSTANCIA `VUE`
+
+Para acceder a cualquier propiedad de algún objeto de la instancia `Vue`, por ejemplo, si alguna variable declarada en `data` desea usarse en alguna función declarada en `methods`, debemos usar la palabra reservada `this`
+
+    ...
+    data: {
+        myData: 'myData',
+        myNewData: 'myNewData'
+    }
+    methods: {
+        myFirstMethod() {
+            this.myData = this.newData;
+        }
+    }
+
+## TIPOS DE DATOS EN `v-model`
+
+Para especificar el tipo de dato al que se va a transformar la variable vinculada con el objeto `v-model`:
+
+    v-model.number = 'myNumberData'
+
+## COMPUTED
+
+Otra propiedad que pertenece a la instancia de `Vue` es `computed`, que es un objeto que contiene funciones que retornan un valor y que son invocadas automáticamente después de realizar alguna operación
+
+    el: ...,
+    data: {
+        ...
+    },
+    methods: {
+        ...
+    },
+    computed: {
+        myFirsListeningtMethod() {
+            ...
+            return value;
+        }
+    }
+
+y puede ser llamado directamente en el `HTML` por medio de `{{  }}`
+
+    <div{{ myFirsListeningtMethod }}</div>
