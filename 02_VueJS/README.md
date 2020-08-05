@@ -182,3 +182,63 @@ Otra propiedad que pertenece a la instancia de `Vue` es `computed`, que es un ob
 y puede ser llamado directamente en el `HTML` por medio de `{{  }}`
 
     <div{{ myFirsListeningtMethod }}</div>
+
+A diferecia de los métodos, las propiedades computadas son cacheadas basándose en sus dependencias, es decir, se almacenan en caché del navegador.
+
+## CICLO DE VIDA DE VUE
+
+`Vue` pasa por diferentes etapas, la primera es su instancia, antes de crear las propiedades `el`, `data`, etc., hace una función llamada `beforeCreate`.
+
+Para comprender mejor el ciclo de vida de `Vue`, obsérvese la gráfica.
+
+![life cicle](/02_VueJS/07_Ciclo_Vida_Vue/lifecycle.png)
+
+## COMPONENTES
+
+Consiste en crear pequeñas partes para separar nuestra aplicación web.
+
+Para crear componentes en `Vue`, se debe crear la instancia de `Vue` de la forma normal identificando el contenedor.
+
+    ...
+        <div id="app">
+            
+        </div>
+    ...
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+            },
+            ...
+        });
+    </script>
+
+Es recomendable que los componentes se creen en una carpeta exclusiva, llamada `components`, dentro de ella, los archivos `js` de cada componente.
+
+La sintaxis básica de los archivos `js` para crear componentes:
+
+    Vue.component('app-my-component', {
+        template: //html
+        `
+        <div>
+            <h1>{{myVar}}</h1>
+        </div>
+        `,
+        data() {
+            return {
+                myVar: 'Hola desde un componente de Vue'
+            }
+        }
+    });
+
+En el `html` donde se desea implementar el componente, se debe realizar mediante la etiqueta con el nombre declarado en el componente, por ejemplo `<app-my-component></app-my-component>`
+
+    ...
+        <div id="app">
+            <app-my-component></app-my-component>
+        </div>
+    ...
+
+Y debe importarse el `script` que es el archivo `js` que contiene el código del componente después de la importación del script `Vue`
+
+    <script src="components/my-component.js"></script>
