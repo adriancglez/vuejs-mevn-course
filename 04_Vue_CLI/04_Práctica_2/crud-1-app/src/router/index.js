@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Inicio from '@/views/Inicio.vue'
 import Editar from "@/views/Editar";
+import Agregar from "@/views/Agregar";
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ Vue.use(VueRouter)
       path: '/editar/:id',
       name: 'Editar',
       component: Editar
+    },
+    {
+      path: '/agregar',
+      name: 'Agregar',
+      component: Agregar
     }
 ]
 
